@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Учебная лаборатория веб-аналитики: страница, переходы и события.">
+  <title>Contacts — GA4 Lab</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="index.html">GA4<span>LAB</span></a><nav aria-label="Основная навигация"><a href="index.html">Главная</a> <a href="about.html">О проекте</a> <a href="contacts.html">Контакты</a></nav></header>
+  
+  <main>
+    <p class="eyebrow">03 / ЛАБОРАТОРИЯ ВЕБ-АНАЛИТИКИ</p>
+    <h1>Давайте работать вместе</h1>
+    
+    <!-- НАЧАЛО ФОРМЫ -->
+    <div class="contact-grid">
+      <form id="lead-form" action="https://script.google.com/macros/s/AKfycbwkGZdP5M8C7hkVWqFg5_n77QyWrqlPPpTfEiiVYV_yenidASMRinJxR4NE2dKms727/exec" method="POST" target="submission-frame">
+        <label>Имя
+          <input type="text" name="name" required maxlength="200" autocomplete="off" placeholder="Иван">
+        </label>
+        <label>Email
+          <input type="email" name="email" required maxlength="200" autocomplete="off" placeholder="ivan@example.com">
+        </label>
+        <label>Направление
+          <select name="direction" required>
+            <option value="">Выберите направление</option>
+            <option value="frontend">Frontend</option>
+            <option value="backend">Backend</option>
+            <option value="data">Data</option>
+          </select>
+        </label>
+        
+        <input type="hidden" name="request_id" id="request_id">
+        <input type="hidden" name="utm_source" id="utm_source">
+        <input type="hidden" name="utm_medium" id="utm_medium">
+        <input type="hidden" name="utm_campaign" id="utm_campaign">
+        
+        <button type="submit">Отправить заявку</button>
+        <button type="reset">Новая заявка</button>
+        <p id="form-status" role="status"></p>
+        <small>Пожалуйста, используйте только вымышленные данные.</small>
+      </form>
+      <iframe name="submission-frame" id="submission-frame" hidden title="Скрытая рамка для ответа"></iframe>
+    </div>
+    <!-- КОНЕЦ ФОРМЫ -->
+    
+  </main>
+  
+  <footer><span>GA4 Lab · Учебный сайт</span><span>HTML / CSS / JavaScript</span></footer>
+</body>
+</html>
